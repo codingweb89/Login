@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #17202A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Cambria";
+    font-weight: lighter;
+}
+
+.container {
+    width: 400px;
+    background: rgba(255, 255, 255, .1);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.container > h1 {
+    text-align: center;
+    color: #fff;
+}
+
+.container > form  {
+    margin: 20px;
+}
+
+.container > form > div {
+    position: relative;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.container > form > div > input[type=text], input[type=password] {
+    width: 90%;
+    padding: 15px;
+    padding-left: 40px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, .1);
+    color: #fff;
+    outline: none;
+}
+
+.container > form > div > input[type=submit] {
+    width: 100%;
+    padding: 15px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 10px;
+    background: #20b2aa;
+    color: #fff;
+    cursor: pointer;
+}
+
+.container > form > div > input::placeholder {
+    color: #fff;
+}
+
+.container > form > div > i {
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    margin: 0 10px;
+}
+
+.switch {
+    position: relative;
+    width: 25px;
+    height: 14px;
+    background: rgba(255, 255, 255, .1);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.switch::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+#loggedin:checked + label div {
+    background: #20b2aa;
+}
+
+#loggedin:checked + label div::before {
+    transform: translateX(11px);
+}
+
+.first-base {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.child-base {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.last-base {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.last-base a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.last-base a:hover {
+    text-decoration: underline;
+}
